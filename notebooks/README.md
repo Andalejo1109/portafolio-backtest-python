@@ -1,5 +1,7 @@
-# Notebooks del curso
+# Notebooks
 
-Capítulos `00`–`09` ejecutados. Gráficas vía `../figures/*.svg`.
+Capítulos `00`–`09` del Portafolio de Andrés Alejandro Rodríguez Lozano.
+
+Autor: Andrés Alejandro Rodríguez Lozano
 
 Abrir en orden desde el [README principal](../README.md).

@@ -1,5 +1,5 @@
 # Figuras
 
-SVG ligeros para render en GitHub (README y notebooks).
+SVG/PNG generados con matplotlib a partir del backtest real (`run_analysis.py` / notebooks).
 
-Los PNG locales (`*.png`) sirven para uso offline tras correr `run_analysis.py`.
+Autor: Andrés Alejandro Rodríguez Lozano
