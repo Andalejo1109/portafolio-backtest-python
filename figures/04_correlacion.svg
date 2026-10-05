@@ -1,35 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" font-family="sans-serif">
-<rect width="420" height="380" fill="#fff"/>
-<text x="210" y="28" text-anchor="middle" font-size="16" font-weight="700">Correlación mensual</text>
-<rect x="60" y="50" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="87" y="82" text-anchor="middle" font-size="11">1.00</text>
-<rect x="120" y="50" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="147" y="82" text-anchor="middle" font-size="11">0.55</text>
-<rect x="180" y="50" width="55" height="55" fill="hsl(84,68%,59%)"/><text x="207" y="82" text-anchor="middle" font-size="11">0.45</text>
-<rect x="240" y="50" width="55" height="55" fill="hsl(55,82%,50%)"/><text x="267" y="82" text-anchor="middle" font-size="11">0.81</text>
-<rect x="300" y="50" width="55" height="55" fill="hsl(45,88%,47%)"/><text x="327" y="82" text-anchor="middle" font-size="11">0.94</text>
-<rect x="60" y="110" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="87" y="142" text-anchor="middle" font-size="11">0.55</text>
-<rect x="120" y="110" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="147" y="142" text-anchor="middle" font-size="11">1.00</text>
-<rect x="180" y="110" width="55" height="55" fill="hsl(96,62%,63%)"/><text x="207" y="142" text-anchor="middle" font-size="11">0.30</text>
-<rect x="240" y="110" width="55" height="55" fill="hsl(80,70%,58%)"/><text x="267" y="142" text-anchor="middle" font-size="11">0.50</text>
-<rect x="300" y="110" width="55" height="55" fill="hsl(72,74%,55%)"/><text x="327" y="142" text-anchor="middle" font-size="11">0.60</text>
-<rect x="60" y="170" width="55" height="55" fill="hsl(84,68%,59%)"/><text x="87" y="202" text-anchor="middle" font-size="11">0.45</text>
-<rect x="120" y="170" width="55" height="55" fill="hsl(96,62%,63%)"/><text x="147" y="202" text-anchor="middle" font-size="11">0.30</text>
-<rect x="180" y="170" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="207" y="202" text-anchor="middle" font-size="11">1.00</text>
-<rect x="240" y="170" width="55" height="55" fill="hsl(88,66%,60%)"/><text x="267" y="202" text-anchor="middle" font-size="11">0.40</text>
-<rect x="300" y="170" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="327" y="202" text-anchor="middle" font-size="11">0.55</text>
-<rect x="60" y="230" width="55" height="55" fill="hsl(55,82%,50%)"/><text x="87" y="262" text-anchor="middle" font-size="11">0.81</text>
-<rect x="120" y="230" width="55" height="55" fill="hsl(80,70%,58%)"/><text x="147" y="262" text-anchor="middle" font-size="11">0.50</text>
-<rect x="180" y="230" width="55" height="55" fill="hsl(88,66%,60%)"/><text x="207" y="262" text-anchor="middle" font-size="11">0.40</text>
-<rect x="240" y="230" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="267" y="262" text-anchor="middle" font-size="11">1.00</text>
-<rect x="300" y="230" width="55" height="55" fill="hsl(52,84%,49%)"/><text x="327" y="262" text-anchor="middle" font-size="11">0.85</text>
-<rect x="60" y="290" width="55" height="55" fill="hsl(45,88%,47%)"/><text x="87" y="322" text-anchor="middle" font-size="11">0.94</text>
-<rect x="120" y="290" width="55" height="55" fill="hsl(72,74%,55%)"/><text x="147" y="322" text-anchor="middle" font-size="11">0.60</text>
-<rect x="180" y="290" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="207" y="322" text-anchor="middle" font-size="11">0.55</text>
-<rect x="240" y="290" width="55" height="55" fill="hsl(52,84%,49%)"/><text x="267" y="322" text-anchor="middle" font-size="11">0.85</text>
-<rect x="300" y="290" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="327" y="322" text-anchor="middle" font-size="11">1.00</text>
-<text x="87" y="370" text-anchor="middle" font-size="11">SPYG</text><text x="30" y="82" text-anchor="middle" font-size="11">SPYG</text>
-<text x="147" y="370" text-anchor="middle" font-size="11">SMH</text><text x="30" y="142" text-anchor="middle" font-size="11">SMH</text>
-<text x="207" y="370" text-anchor="middle" font-size="11">BRK</text><text x="30" y="202" text-anchor="middle" font-size="11">BRK</text>
-<text x="267" y="370" text-anchor="middle" font-size="11">IEMG</text><text x="30" y="262" text-anchor="middle" font-size="11">IEMG</text>
-<text x="327" y="370" text-anchor="middle" font-size="11">VTI</text><text x="30" y="322" text-anchor="middle" font-size="11">VTI</text>
-<text x="40" y="48" font-size="10" fill="#666">Aprox. ilustrativa · matriz exacta en results/</text>
-</svg>
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!-- Matplotlib -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="190.896528pt" height="201.583955pt" viewBox="0 0 190.896528 201.583955" xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style></defs><g id="figure_1"><g id="patch_1"><path d="M 0 201.583955 
+L 190.896528 201.583955 
+L 190.896528 0 
+L 0 0 
+z
+" style="fill: #ffffff"/></g><g id="axes_1"><g id="patch_2"><path d="M 31.857813 171.437465 
+L 183.696528 171.437465 
+L 183.696528 19.59875 
+L 31.857813 19.59875 
+z
+" style="fill: #ffffff"/></g><image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAYAAADHl1ErAAABYElEQVR4nO3cMStFYRzH8f/VGe5wFAteAFInpWQhmRkU031H3orJcBOLgZTtLmRisSmD6NIdFK/h+7uj72f/9dS3Z3rqnN5wdvW3Qmtdk05rcWMh3n68fMbbqqrby3G8nZnq5H/IYJDBIINBBoMMBhkMMhhkMMhgkMEgg0EGgwwGNTtH+TPL5H0Sb9uDlXh7fngTb6uqdvfbeOsNgwwGGQwyGGQwyGCQwSCDQQaDDAYZDDIYZDDIYFDTbi3F47nN5Xh7un0WbwfDvXhbVTW+eIq33jDIYJDBIINBBoMMBhkMMhhkMMhgkMEgg0EGgwwGGQzq3Xf512wPj/nBg7vjePt6cpUfXFVfb9/x1hsGGQwyGGQwyGCQwSCDQQaDDAYZDDIYZDDIYJDBoGaaJ5r1Lt/+jJ7jbX++nx9cVaPr/GdH3jDIYJDBIINBBoMMBhkMMhhkMMhgkMEgg0EGgwwG/QEjySZWugqavgAAAABJRU5ErkJggg==" id="image522d64cec7" transform="scale(1 -1) translate(0 -152)" x="32" y="-18" width="152" height="152"/><g id="matplotlib.axis_1"><g id="xtick_1"><g id="line2d_1"><defs><path id="m36bedc8e9f" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/></defs><g><use xlink:href="#m36bedc8e9f" x="47.041684" y="171.437465" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_1"><text style="font-size: 6px; font-family: sans-serif" transform="translate(34.158409 191.962461) rotate(-40)">SPYG</text></g></g><g id="xtick_2"><g id="line2d_2"><g><use xlink:href="#m36bedc8e9f" x="77.409427" y="171.437465" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_2"><text style="font-size: 6px; font-family: sans-serif" transform="translate(66.142745 190.605978) rotate(-40)">SMH</text></g></g><g id="xtick_3"><g id="line2d_3"><g><use xlink:href="#m36bedc8e9f" x="107.77717" y="171.437465" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_3"><text style="font-size: 6px; font-family: sans-serif" transform="translate(93.323983 193.279774) rotate(-40)">BRK-B</text></g></g><g id="xtick_4"><g id="line2d_4"><g><use xlink:href="#m36bedc8e9f" x="138.144913" y="171.437465" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_4"><text style="font-size: 6px; font-family: sans-serif" transform="translate(125.431126 191.820244) rotate(-40)">IEMG</text></g></g><g id="xtick_5"><g id="line2d_5"><g><use xlink:href="#m36bedc8e9f" x="168.512656" y="171.437465" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_5"><text style="font-size: 6px; font-family: sans-serif" transform="translate(160.278793 188.061142) rotate(-40)">VTI</text></g></g></g><g id="matplotlib.axis_2"><g id="ytick_1"><g id="line2d_6"><defs><path id="m7b2eb64315" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/></defs><g><use xlink:href="#m7b2eb64315" x="31.857813" y="34.782622" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_6"><text style="font-size: 6px; font-family: sans-serif; text-anchor: end" x="24.857813" y="37.061918">SPYG</text></g></g><g id="ytick_2"><g id="line2d_7"><g><use xlink:href="#m7b2eb64315" x="31.857813" y="65.150365" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_7"><text style="font-size: 6px; font-family: sans-serif; text-anchor: end" x="24.857813" y="67.429662">SMH</text></g></g><g id="ytick_3"><g id="line2d_8"><g><use xlink:href="#m7b2eb64315" x="31.857813" y="95.518108" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_8"><text style="font-size: 6px; font-family: sans-serif; text-anchor: end" x="24.857813" y="97.797405">BRK-B</text></g></g><g id="ytick_4"><g id="line2d_9"><g><use xlink:href="#m7b2eb64315" x="31.857813" y="125.885851" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_9"><text style="font-size: 6px; font-family: sans-serif; text-anchor: end" x="24.857813" y="128.165148">IEMG</text></g></g><g id="ytick_5"><g id="line2d_10"><g><use xlink:href="#m7b2eb64315" x="31.857813" y="156.253594" style="stroke: #000000; stroke-width: 0.8"/></g></g><g id="text_10"><text style="font-size: 6px; font-family: sans-serif; text-anchor: end" x="24.857813" y="158.532891">VTI</text></g></g></g><g id="patch_3"><path d="M 31.857813 171.437465 
+L 31.857813 19.59875 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/></g><g id="patch_4"><path d="M 183.696528 171.437465 
+L 183.696528 19.59875 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/></g><g id="patch_5"><path d="M 31.857813 171.437465 
+L 183.696528 171.437465 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/></g><g id="patch_6"><path d="M 31.857813 19.59875 
+L 183.696528 19.59875 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/></g><g id="text_11"><text style="font-size: 8px; font-family: sans-serif; text-anchor: middle" x="107.77717" y="13.59875">Correlación (mensual)</text></g></g></g></svg>
