@@ -1,6 +1,6 @@
 """
-Utilidades de backtest de portafolio (estilo Portfolio Visualizer).
-Educativo — no constituye asesoría de inversión.
+Utilidades de backtest educativo — Portafolio de Andrés Alejandro Rodríguez Lozano.
+No constituye asesoría de inversión.
 """
 from __future__ import annotations
 
@@ -20,14 +20,6 @@ FIGS = ROOT / "figures"
 RESULTS = ROOT / "results"
 for _d in (DATA, FIGS, RESULTS):
     _d.mkdir(parents=True, exist_ok=True)
-
-ORIGINAL_WEIGHTS = {
-    "SPYG": 0.42,
-    "BRK-B": 0.27,
-    "SMH": 0.15,
-    "VTI": 0.11,
-    "SPY": 0.05,
-}
 
 LIVE_WEIGHTS_RAW = {
     "SPYG": 14970.29,
@@ -104,7 +96,7 @@ def backtest_portfolio(
     rebalance: str = "A",
 ) -> pd.DataFrame:
     """
-    Backtest por retornos mensuales (estilo Portfolio Visualizer).
+    Backtest por retornos mensuales (rebalanceo anual/mensual/none).
 
     - Precios mensuales deben incluir el mes ANTERIOR al inicio (p. ej. dic-2015)
       para que el primer retorno del periodo (ene-2016) esté disponible.
@@ -119,6 +111,7 @@ def backtest_portfolio(
     px = month_prices[cols].dropna().sort_index()
     rets_all = px.pct_change()
 
+    # Ventana de retornos del backtest
     r = rets_all.copy()
     if start:
         r = r.loc[r.index >= pd.Timestamp(start)]
@@ -142,13 +135,16 @@ def backtest_portfolio(
         values.append(value)
         dates.append(dt)
 
+        # Actualizar pesos drift
         w = w * (1.0 + rw)
         w = w / w.sum()
 
+        # Rebalanceo al cierre del mes si corresponde
         do_reb = False
         if rebalance == "M":
             do_reb = True
         elif rebalance == "A":
+            # Tras diciembre, o si el siguiente mes cambia de año
             if dt.month == 12:
                 do_reb = True
             elif i + 1 < len(r.index) and r.index[i + 1].year != dt.year:
