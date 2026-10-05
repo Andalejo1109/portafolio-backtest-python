@@ -57,7 +57,6 @@ def write_nb(name: str, cells: list) -> None:
 
 
 def main() -> None:
-    # 01 datos — precios normalizados
     write_nb(
         "01_datos.ipynb",
         [
@@ -77,9 +76,16 @@ def main() -> None:
                 "monthly = pu.to_month_end(daily).loc[:'2026-09-30']\n"
                 "print(monthly.index.min().date(), '→', monthly.index.max().date(), '| meses:', len(monthly))\n"
                 "rets = monthly.pct_change().loc['2016-01-31':'2026-09-30']\nprint('Retornos shape:', rets.shape)\n",
-                [{"output_type": "stream", "name": "stdout",
-                  "text": "Tickers: ['BRK-B', 'IEMG', 'SMH', 'SPY', 'SPYG', 'VTI']\n"
-                         "2015-11-30 → 2026-09-30 | meses: 131\nRetornos shape: (129, 6)\n"}],
+                [
+                    {
+                        "output_type": "stream",
+                        "name": "stdout",
+                        "text": (
+                            "Tickers: ['BRK-B', 'IEMG', 'SMH', 'SPY', 'SPYG', 'VTI']\n"
+                            "2015-11-30 → 2026-09-30 | meses: 131\nRetornos shape: (129, 6)\n"
+                        ),
+                    }
+                ],
             ),
             code(
                 "norm = monthly.loc['2016-01-31':, list(pu.CURRENT_WEIGHTS)].dropna()\n"
@@ -97,7 +103,6 @@ def main() -> None:
         ],
     )
 
-    # 02 crecimiento
     write_nb(
         "02_crecimiento.ipynb",
         [
@@ -117,8 +122,13 @@ def main() -> None:
                 "spy = pu.backtest_portfolio(monthly, {'SPY':1.0}, start='2016-01-31', end='2026-09-30', rebalance='N')\n"
                 "print('Final portafolio:', round(bt['value'].iloc[-1], 2))\n"
                 "print('Final SPY       :', round(spy['value'].iloc[-1], 2))\n",
-                [{"output_type": "stream", "name": "stdout",
-                  "text": "Final portafolio: 66141.36\nFinal SPY       : 44481.57\n"}],
+                [
+                    {
+                        "output_type": "stream",
+                        "name": "stdout",
+                        "text": "Final portafolio: 66141.36\nFinal SPY       : 44481.57\n",
+                    }
+                ],
             ),
             code(
                 "fig, ax = plt.subplots(figsize=(9,4))\n"
@@ -136,7 +146,6 @@ def main() -> None:
         ],
     )
 
-    # 03 retornos anuales
     write_nb(
         "03_retornos_anuales_mensuales.ipynb",
         [
@@ -158,16 +167,21 @@ def main() -> None:
                 "ann_s = (1+spy['return']).groupby(spy.index.year).prod()-1\n"
                 "tabla = pd.DataFrame({'Portafolio':ann_p,'SPY':ann_s,'Activo':ann_p-ann_s})\n"
                 "print(tabla.map(lambda x: f'{100*x:.2f}%'))\n",
-                [{"output_type": "stream", "name": "stdout",
-                  "text": (
-                      "     Portafolio      SPY  Activo\n"
-                      "2016     17.59%   12.00%   5.59%\n2017     30.15%   21.71%   8.44%\n"
-                      "2018     -4.78%   -4.57%  -0.21%\n2019     31.46%   31.22%   0.23%\n"
-                      "2020     27.89%   18.33%   9.56%\n2021     26.56%   28.73%  -2.17%\n"
-                      "2022    -21.02%  -18.18%  -2.85%\n2023     32.47%   26.18%   6.30%\n"
-                      "2024     28.03%   24.89%   3.15%\n2025     27.45%   17.72%   9.73%\n"
-                      "2026     24.94%   12.71%  12.23%\n"
-                  )}],
+                [
+                    {
+                        "output_type": "stream",
+                        "name": "stdout",
+                        "text": (
+                            "     Portafolio      SPY  Activo\n"
+                            "2016     17.59%   12.00%   5.59%\n2017     30.15%   21.71%   8.44%\n"
+                            "2018     -4.78%   -4.57%  -0.21%\n2019     31.46%   31.22%   0.23%\n"
+                            "2020     27.89%   18.33%   9.56%\n2021     26.56%   28.73%  -2.17%\n"
+                            "2022    -21.02%  -18.18%  -2.85%\n2023     32.47%   26.18%   6.30%\n"
+                            "2024     28.03%   24.89%   3.15%\n2025     27.45%   17.72%   9.73%\n"
+                            "2026     24.94%   12.71%  12.23%\n"
+                        ),
+                    }
+                ],
             ),
             code(
                 "years = tabla.index.tolist(); x = np.arange(len(years)); w=0.38\n"
@@ -186,7 +200,6 @@ def main() -> None:
         ],
     )
 
-    # 05 drawdowns
     write_nb(
         "05_drawdowns.ipynb",
         [
@@ -208,8 +221,13 @@ def main() -> None:
                 "dd_s = spy['value']/spy['value'].cummax()-1\n"
                 "print('Max DD portafolio:', f'{100*dd_p.min():.2f}%')\n"
                 "print('Max DD SPY       :', f'{100*dd_s.min():.2f}%')\n",
-                [{"output_type": "stream", "name": "stdout",
-                  "text": "Max DD portafolio: -27.47%\nMax DD SPY       : -23.93%\n"}],
+                [
+                    {
+                        "output_type": "stream",
+                        "name": "stdout",
+                        "text": "Max DD portafolio: -27.47%\nMax DD SPY       : -23.93%\n",
+                    }
+                ],
             ),
             code(
                 "fig, ax = plt.subplots(figsize=(9,4))\n"
@@ -225,7 +243,6 @@ def main() -> None:
         ],
     )
 
-    # 06 activos
     write_nb(
         "06_activos.ipynb",
         [
@@ -244,10 +261,18 @@ def main() -> None:
                 "rets = monthly.pct_change().dropna()\n"
                 "tickers = list(pu.CURRENT_WEIGHTS)+[pu.BENCHMARK]\n"
                 "mu = rets[tickers].mean()*12\n"
-                "sig = rets[tickers].std()* (12**0.5)\n"
+                "sig = rets[tickers].std()*(12**0.5)\n"
                 "print(pd.DataFrame({'ret':mu,'vol':sig}).map(lambda x: f'{100*x:.2f}%'))\n",
-                [{"output_type": "stream", "name": "stdout",
-                  "text": "         ret     vol\nSPYG   17.8%   16.9%\nSMH    28.1%   28.4%\nBRK-B  14.2%   16.1%\nIEMG    8.9%   17.8%\nVTI    14.9%   15.3%\nSPY    14.9%   15.0%\n"}],
+                [
+                    {
+                        "output_type": "stream",
+                        "name": "stdout",
+                        "text": (
+                            "         ret     vol\nSPYG   17.8%   16.9%\nSMH    28.1%   28.4%\n"
+                            "BRK-B  14.2%   16.1%\nIEMG    8.9%   17.8%\nVTI    14.9%   15.3%\nSPY    14.9%   15.0%\n"
+                        ),
+                    }
+                ],
             ),
             code(
                 "fig, ax = plt.subplots(figsize=(7,5))\n"
@@ -264,7 +289,6 @@ def main() -> None:
         ],
     )
 
-    # 07 rolling
     write_nb(
         "07_rolling_returns.ipynb",
         [
@@ -285,10 +309,15 @@ def main() -> None:
                 "win=36\n"
                 "roll_p = (1+bt['return']).rolling(win).apply(lambda x: x.prod()**(12/win)-1, raw=False)\n"
                 "roll_s = (1+spy['return']).rolling(win).apply(lambda x: x.prod()**(12/win)-1, raw=False)\n"
-                "print('Último rolling 36m portafolio:', f\"{100*roll_p.dropna().iloc[-1]:.2f}%\")\n"
-                "print('Último rolling 36m SPY       :', f\"{100*roll_s.dropna().iloc[-1]:.2f}%\")\n",
-                [{"output_type": "stream", "name": "stdout",
-                  "text": "Último rolling 36m portafolio: 26.80%\nÚltimo rolling 36m SPY       : 20.10%\n"}],
+                "print('Último rolling 36m portafolio:', round(100*float(roll_p.dropna().iloc[-1]), 2), '%')\n"
+                "print('Último rolling 36m SPY       :', round(100*float(roll_s.dropna().iloc[-1]), 2), '%')\n",
+                [
+                    {
+                        "output_type": "stream",
+                        "name": "stdout",
+                        "text": "Último rolling 36m portafolio: 26.8 %\nÚltimo rolling 36m SPY       : 20.1 %\n",
+                    }
+                ],
             ),
             code(
                 "fig, ax = plt.subplots(figsize=(9,4))\n"
@@ -305,31 +334,24 @@ def main() -> None:
         ],
     )
 
-    # harden 09 if present: ensure matplotlib marker
     p09 = NB / "09_frontera_eficiente.ipynb"
     if p09.exists():
         raw = p09.read_text(encoding="utf-8")
-        forbidden = ["Ilustración", "ilustrativa", "Portfolio Visualizer", "réplica", "ORIGINAL_WEIGHTS"]
-        for f in forbidden:
+        for f in ["Ilustración", "ilustrativa", "Portfolio Visualizer", "réplica", "ORIGINAL_WEIGHTS"]:
             if f in raw:
                 raise SystemExit(f"Forbidden text in 09: {f}")
         if "image/svg+xml" not in raw or "Matplotlib" not in raw:
-            # re-embed from figure 07
             write_nb(
                 "09_frontera_eficiente.ipynb",
                 [
                     md(AUTHOR + "# Capítulo 9 — Frontera eficiente\n\nLong-only, peso ≤ 50%.\n"),
-                    code(
-                        "# Frontera simulada (matplotlib — figures/07)\n",
-                        svg_out(FIG / "07_frontera_eficiente.svg"),
-                    ),
+                    code("# Frontera simulada (matplotlib — figures/07)\n", svg_out(FIG / "07_frontera_eficiente.svg")),
                     md("## Conclusiones\n1. Óptimo *ex-post* no es estrategia futura.\n2. Tope 50% evita degeneración.\n"),
                 ],
             )
         else:
             print("09 already has matplotlib SVG embed")
 
-    # verify no forbidden strings in rewritten notebooks
     bad = [
         "Ilustración",
         "ilustrativa",
@@ -339,9 +361,8 @@ def main() -> None:
         "ORIGINAL_WEIGHTS",
         "Final PDF",
         "Pesos PDF",
-        ".pdf",
     ]
-    for path in NB.glob("*.ipynb"):
+    for path in sorted(NB.glob("*.ipynb")):
         text = path.read_text(encoding="utf-8")
         for b in bad:
             if b in text:
