@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" font-family="sans-serif">
+<rect width="420" height="380" fill="#fff"/>
+<text x="210" y="28" text-anchor="middle" font-size="16" font-weight="700">Correlación mensual</text>
+<rect x="60" y="50" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="87" y="82" text-anchor="middle" font-size="11">1.00</text>
+<rect x="120" y="50" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="147" y="82" text-anchor="middle" font-size="11">0.55</text>
+<rect x="180" y="50" width="55" height="55" fill="hsl(84,68%,59%)"/><text x="207" y="82" text-anchor="middle" font-size="11">0.45</text>
+<rect x="240" y="50" width="55" height="55" fill="hsl(55,82%,50%)"/><text x="267" y="82" text-anchor="middle" font-size="11">0.81</text>
+<rect x="300" y="50" width="55" height="55" fill="hsl(45,88%,47%)"/><text x="327" y="82" text-anchor="middle" font-size="11">0.94</text>
+<rect x="60" y="110" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="87" y="142" text-anchor="middle" font-size="11">0.55</text>
+<rect x="120" y="110" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="147" y="142" text-anchor="middle" font-size="11">1.00</text>
+<rect x="180" y="110" width="55" height="55" fill="hsl(96,62%,63%)"/><text x="207" y="142" text-anchor="middle" font-size="11">0.30</text>
+<rect x="240" y="110" width="55" height="55" fill="hsl(80,70%,58%)"/><text x="267" y="142" text-anchor="middle" font-size="11">0.50</text>
+<rect x="300" y="110" width="55" height="55" fill="hsl(72,74%,55%)"/><text x="327" y="142" text-anchor="middle" font-size="11">0.60</text>
+<rect x="60" y="170" width="55" height="55" fill="hsl(84,68%,59%)"/><text x="87" y="202" text-anchor="middle" font-size="11">0.45</text>
+<rect x="120" y="170" width="55" height="55" fill="hsl(96,62%,63%)"/><text x="147" y="202" text-anchor="middle" font-size="11">0.30</text>
+<rect x="180" y="170" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="207" y="202" text-anchor="middle" font-size="11">1.00</text>
+<rect x="240" y="170" width="55" height="55" fill="hsl(88,66%,60%)"/><text x="267" y="202" text-anchor="middle" font-size="11">0.40</text>
+<rect x="300" y="170" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="327" y="202" text-anchor="middle" font-size="11">0.55</text>
+<rect x="60" y="230" width="55" height="55" fill="hsl(55,82%,50%)"/><text x="87" y="262" text-anchor="middle" font-size="11">0.81</text>
+<rect x="120" y="230" width="55" height="55" fill="hsl(80,70%,58%)"/><text x="147" y="262" text-anchor="middle" font-size="11">0.50</text>
+<rect x="180" y="230" width="55" height="55" fill="hsl(88,66%,60%)"/><text x="207" y="262" text-anchor="middle" font-size="11">0.40</text>
+<rect x="240" y="230" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="267" y="262" text-anchor="middle" font-size="11">1.00</text>
+<rect x="300" y="230" width="55" height="55" fill="hsl(52,84%,49%)"/><text x="327" y="262" text-anchor="middle" font-size="11">0.85</text>
+<rect x="60" y="290" width="55" height="55" fill="hsl(45,88%,47%)"/><text x="87" y="322" text-anchor="middle" font-size="11">0.94</text>
+<rect x="120" y="290" width="55" height="55" fill="hsl(72,74%,55%)"/><text x="147" y="322" text-anchor="middle" font-size="11">0.60</text>
+<rect x="180" y="290" width="55" height="55" fill="hsl(76,72%,56%)"/><text x="207" y="322" text-anchor="middle" font-size="11">0.55</text>
+<rect x="240" y="290" width="55" height="55" fill="hsl(52,84%,49%)"/><text x="267" y="322" text-anchor="middle" font-size="11">0.85</text>
+<rect x="300" y="290" width="55" height="55" fill="hsl(40,90%,45%)"/><text x="327" y="322" text-anchor="middle" font-size="11">1.00</text>
+<text x="87" y="370" text-anchor="middle" font-size="11">SPYG</text><text x="30" y="82" text-anchor="middle" font-size="11">SPYG</text>
+<text x="147" y="370" text-anchor="middle" font-size="11">SMH</text><text x="30" y="142" text-anchor="middle" font-size="11">SMH</text>
+<text x="207" y="370" text-anchor="middle" font-size="11">BRK</text><text x="30" y="202" text-anchor="middle" font-size="11">BRK</text>
+<text x="267" y="370" text-anchor="middle" font-size="11">IEMG</text><text x="30" y="262" text-anchor="middle" font-size="11">IEMG</text>
+<text x="327" y="370" text-anchor="middle" font-size="11">VTI</text><text x="30" y="322" text-anchor="middle" font-size="11">VTI</text>
+<text x="40" y="48" font-size="10" fill="#666">Aprox. ilustrativa · matriz exacta en results/</text>
+</svg>
