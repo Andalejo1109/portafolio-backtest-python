@@ -1,12 +1,13 @@
-# Portafolio Backtest en Python
+# Backtest de portafolio en Python
 
-Réplica educativa del ejercicio **Backtest Portfolio Asset Allocation** de [Portfolio Visualizer](https://www.portfoliovisualizer.com/), actualizada a **septiembre 2026**, con los **pesos vivos** del portafolio en eToro y el **S&P 500 (`SPY`)** como benchmark.
+**Portafolio de Andrés Alejandro Rodríguez Lozano**  
+**Autor:** Andrés Alejandro Rodríguez Lozano
+
+Backtest educativo de la asignación de activos actual (snapshot eToro del **5 oct 2026**) frente al S&P 500 (`SPY`), periodo **ene-2016 → sep-2026**. Inspirado en un ejercicio de backtest del año pasado.
 
 > **No es asesoría de inversión.** Material para clase universitaria: juicio previo, ETL, código, métricas y conclusiones.
 
-**Repo:** https://github.com/Andalejo1109/portafolio-backtest-python  
-**Autor:** Alejandro Rodriguez L.  
-**Fecha de pesos eToro:** 5 oct 2026, 11:45 a.m. (hora Colombia)
+**Repo:** https://github.com/Andalejo1109/portafolio-backtest-python
 
 ---
 
@@ -22,7 +23,7 @@ Réplica educativa del ejercicio **Backtest Portfolio Asset Allocation** de [Por
 | 5 | [`notebooks/05_drawdowns.ipynb`](notebooks/05_drawdowns.ipynb) | Underwater chart |
 | 6 | [`notebooks/06_activos.ipynb`](notebooks/06_activos.ipynb) | Riesgo–retorno por ticker |
 | 7 | [`notebooks/07_rolling_returns.ipynb`](notebooks/07_rolling_returns.ipynb) | CAGR rodante 3y/5y |
-| 8 | [`notebooks/08_correlacion.ipynb`](notebooks/08_correlacion.ipynb) | **Matriz de correlación (nuevo)** |
+| 8 | [`notebooks/08_correlacion.ipynb`](notebooks/08_correlacion.ipynb) | Matriz de correlación |
 | 9 | [`notebooks/09_frontera_eficiente.ipynb`](notebooks/09_frontera_eficiente.ipynb) | Monte Carlo, máx Sharpe / mín vol |
 
 Código compartido: [`src/portfolio_utils.py`](src/portfolio_utils.py) · script batch: [`run_analysis.py`](run_analysis.py)
@@ -34,7 +35,7 @@ Código compartido: [`src/portfolio_utils.py`](src/portfolio_utils.py) · script
 Antes de mirar resultados:
 
 1. Un núcleo **growth + semiconductores** debería **superar a SPY en CAGR** en 2016–2026, a costa de mayor volatilidad y peores caídas en 2022.
-2. Sustituir el 5% de SPY del PDF e incorporar **~20% IEMG** debería **bajar un poco la correlación** con EE.UU., pero diluir retorno si emergentes rezagan.
+2. Incluir **~20% IEMG** debería **bajar un poco la correlación** con EE.UU., pero puede diluir retorno si emergentes rezagan.
 3. `SMH`–`SPYG` serán altamente correlacionados (>0.8).
 4. El Max DD del portafolio será **peor** que el de SPY.
 
@@ -46,34 +47,19 @@ Antes de mirar resultados:
 |---|---|
 | Datos | `yfinance` precios ajustados (total return) |
 | Frecuencia | Mensual (último precio del mes) |
-| Periodo original (validación) | ene-2016 → may-2025 |
-| Periodo actualizado | ene-2016 → **sep-2026** |
+| Periodo | ene-2016 → **sep-2026** |
 | Capital inicial | US$10.000 |
-| Aportes | Ninguno (como el PDF) |
+| Aportes | Ninguno |
 | Rebalanceo | **Anual** (cierre de año) |
-| Benchmark | `SPY` (aprox. VFINX del PDF) |
+| Benchmark | `SPY` |
 | Libre de riesgo | `^IRX` (T-Bill 13s) / 12 |
 | Restricciones frontera | long-only, sin apalancamiento, peso ≤ 50% |
 
-**Exposures / style analysis (Morningstar):** no se replican — requieren datos de fundamentals de pago. Se documenta aquí y se omite a propósito.
-
 ---
 
-## Pesos usados
+## Pesos actuales (eToro, valor de mercado, sin efectivo)
 
-### Original (PDF Portfolio Visualizer)
-
-| Ticker | Peso |
-|---|---|
-| SPYG | 42% |
-| BRK.B | 27% |
-| SMH | 15% |
-| VTI | 11% |
-| SPY | 5% |
-
-### Actual (eToro, valor de mercado, sin efectivo)
-
-Fuente: conector `user-Etoro-xai` → `get-my-portfolio-summary` (solo lectura), snapshot `2026-10-05T16:45:09Z`.
+Fuente: conector eToro `get-my-portfolio-summary` (solo lectura), snapshot `2026-10-05T16:45:09Z`.
 
 | Ticker | Valor US$ | Peso |
 |---|---:|---:|
@@ -84,27 +70,11 @@ Fuente: conector `user-Etoro-xai` → `get-my-portfolio-summary` (solo lectura),
 | VTI | 3.521 | 7.18% |
 | **Total** | **49.063** | **100%** |
 
-Núcleo thesis SPYG/SMH/BRK/IEMG/VTI — no había holdings materiales fuera de este set.
-
 ---
 
-## Validación de la réplica (ene-2016 → may-2025, pesos PDF)
+## Resultados (ene-2016 → sep-2026)
 
-| Métrica | PDF | Réplica Python | Δ |
-|---|---:|---:|---:|
-| Valor final | 46.016 | 46,014 | -2 |
-| CAGR | 17.60% | 17.60% | ~0 |
-| Volatilidad | 16.31% | 16.31% | ~0 |
-| Max DD | −25.59% | -25.59% | ~0 |
-| Sharpe | 0.96 | 0.96 | ~0 |
-
-La réplica es **fiel** (error de valor final < US$2).
-
----
-
-## Resultados actualizados (ene-2016 → sep-2026)
-
-| Métrica | Portafolio actual | SPY |
+| Métrica | Portafolio | SPY |
 |---|---:|---:|
 | Valor final (de US$10k) | **66,141** | 44,482 |
 | CAGR | **19.21%** | 14.89% |
@@ -138,7 +108,7 @@ La réplica es **fiel** (error de valor final < US$2).
 
 ## Figuras principales
 
-Los notebooks (`notebooks/00`–`09`) incluyen las gráficas en sus salidas. Versiones SVG para GitHub:
+Generadas con matplotlib a partir de los precios reales del repositorio:
 
 ### Crecimiento
 ![Crecimiento](figures/01_crecimiento.svg)
@@ -160,13 +130,12 @@ Los notebooks (`notebooks/00`–`09`) incluyen las gráficas en sus salidas. Ver
 
 ---
 
-## Conclusiones actualizadas
+## Conclusiones
 
-1. **La réplica del PDF es sólida** (CAGR/Max DD/Sharpe alineados a 2 decimales).
-2. **Con pesos vivos (más SMH + IEMG), el portafolio sigue batir a SPY** en CAGR (~19.2% vs ~14.9%) y Sharpe (~1.02 vs ~0.85) hasta sep-2026, con Max DD algo peor (~−27.5% vs ~−23.9%).
-3. **IEMG aporta diversificación** pero históricamente diluye el motor EE.UU. growth.
-4. **El alpha no es uniforme**: se concentra en años risk-on tech; 2022 es el régimen crítico.
-5. **La frontera eficiente ex-post favorece SMH+BRK-B** — útil para discutir sobreajuste, no para rebalancear a ciegas.
+1. **Con pesos vivos (SMH + IEMG), el portafolio bate a SPY** en CAGR (~19.2% vs ~14.9%) y Sharpe (~1.02 vs ~0.85) hasta sep-2026, con Max DD algo peor (~−27.5% vs ~−23.9%).
+2. **IEMG aporta diversificación** pero históricamente diluye el motor EE.UU. growth.
+3. **El alpha no es uniforme**: se concentra en años risk-on tech; 2022 es el régimen crítico.
+4. **La frontera eficiente ex-post favorece SMH+BRK-B** — útil para discutir sobreajuste, no para rebalancear a ciegas.
 
 ---
 
@@ -183,8 +152,12 @@ cd notebooks && jupyter notebook
 
 ## Limitaciones
 
-- Precios Yahoo ≠ vendor de Portfolio Visualizer.
+- Precios Yahoo Finance; resultados pueden diferir de otros vendors.
 - Sharpe/Sortino dependen de `^IRX`.
 - Optimización media-varianza es **in-sample**.
 - Sin impuestos/spreads/costos de rebalanceo.
-- Exposures/style Morningstar omitidos (datos de pago).
+
+---
+
+**Autor:** Andrés Alejandro Rodríguez Lozano  
+**Portafolio:** Portafolio de Andrés Alejandro Rodríguez Lozano
