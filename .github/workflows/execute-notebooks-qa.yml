@@ -13,8 +13,6 @@ jobs:
           python-version: '3.12'
       - name: Install deps
         run: python -m pip install -q -r requirements.txt
-      - name: Write fresh-clone-safe notebook sources
-        run: python scripts/write_nb_sources.py
       - name: Ensure price cache
         run: python run_analysis.py
       - name: Execute notebooks 00-09
