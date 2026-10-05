@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" font-family="sans-serif">
+<rect width="640" height="280" fill="#fff"/>
+<text x="320" y="28" text-anchor="middle" font-size="16" font-weight="700">CAGR rodante 3a / 5a</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="40,120 120,90 200,70 280,100 360,180 440,150 520,80 600,60"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2" points="40,130 120,110 200,95 280,115 360,165 440,145 520,100 600,90"/>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2" stroke-dasharray="6 3" points="120,100 200,85 280,95 360,140 440,130 520,95 600,75"/>
+<rect x="40" y="40" width="12" height="12" fill="#1f77b4"/><text x="58" y="50" font-size="11">Port 3a</text>
+<rect x="130" y="40" width="12" height="12" fill="#ff7f0e"/><text x="148" y="50" font-size="11">SPY 3a</text>
+<rect x="220" y="40" width="12" height="12" fill="#2ca02c"/><text x="238" y="50" font-size="11">Port 5a</text>
+<text x="40" y="265" font-size="11" fill="#666">Ver notebook 07</text>
+</svg>

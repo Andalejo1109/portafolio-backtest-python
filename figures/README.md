@@ -1,4 +1,5 @@
 # Figuras
 
-- **SVG** (recomendados en GitHub): `01`–`05`, `07` — enlazados desde el README.
-- **PNG**: generados por `run_analysis.py` / notebooks.
+SVG ligeros para render en GitHub (README y notebooks).
+
+Los PNG locales (`*.png`) sirven para uso offline tras correr `run_analysis.py`.

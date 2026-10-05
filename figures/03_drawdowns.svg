@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" font-family="sans-serif">
+<rect width="640" height="280" fill="#fff"/>
+<text x="320" y="28" text-anchor="middle" font-size="16" font-weight="700">Drawdowns</text>
+<line x1="40" y1="60" x2="600" y2="60" stroke="#333"/>
+<path d="M40,60 L120,70 L200,65 L280,80 L360,200 L420,180 L500,90 L580,70 L600,65" fill="#1f77b455" stroke="#1f77b4" stroke-width="2"/>
+<path d="M40,60 L120,68 L200,62 L280,75 L360,175 L420,160 L500,85 L580,72 L600,68" fill="none" stroke="#ff7f0e" stroke-width="2"/>
+<text x="360" y="215" font-size="11">Max DD port. ≈ −27.5%</text>
+<text x="360" y="230" font-size="11">Max DD SPY ≈ −23.9%</text>
+<text x="40" y="265" font-size="11" fill="#666">Ver notebook 05</text>
+</svg>
