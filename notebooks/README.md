@@ -1,1 +1,5 @@
-IyBOb3RlYm9va3MgZGVsIGN1cnNvCgpDYXDDrXR1bG9zIGAwMGAtYDA5YCBlamVjdXRhZG9zIGNvbiBzYWxpZGFzIChpbmNsdXllbmRvIGdyw6FmaWNhcyBlbWJlYmlkYXMpLgoKQWJyaXIgZW4gb3JkZW4gZGVzZGUgZWwgW1JFQURNRSBwcmluY2lwYWxdKC4uL1JFQURNRS5tZCkuCg==
+# Notebooks del curso
+
+Capítulos `00`–`09` ejecutados con salidas (incluyendo gráficas embebidas).
+
+Abrir en orden desde el [README principal](../README.md).
