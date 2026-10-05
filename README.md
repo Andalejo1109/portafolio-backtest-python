@@ -98,7 +98,7 @@ Núcleo thesis SPYG/SMH/BRK/IEMG/VTI — no había holdings materiales fuera de 
 | Max DD | −25.59% | -25.59% | ~0 |
 | Sharpe | 0.96 | 0.96 | ~0 |
 
-La réplica es **fiel** (error de valor final < US$2). Diferencias residuales: proveedor de precios (Yahoo vs PV) y que el PDF usa VFINX como benchmark (aquí validamos el portafolio; el benchmark reportado en métricas relativas usa SPY).
+La réplica es **fiel** (error de valor final < US$2).
 
 ---
 
@@ -130,37 +130,43 @@ La réplica es **fiel** (error de valor final < US$2). Diferencias residuales: p
 | SMH–BRK-B | 0.30 (mín. del núcleo) |
 | IEMG–BRK-B | 0.38 |
 
-Diversificación efectiva del set actual: **IEMG** y **BRK-B**. `SMH` y `SPYG` se mueven muy juntos.
-
 ### Frontera (ex-post, solo diagnóstico)
 
-Óptimo máx. Sharpe histórico (muestra completa, peso ≤50%): ≈ SMH 46% + BRK-B 45% (sobreajuste; **no** usar como señal de trading).
+Óptimo máx. Sharpe histórico (peso ≤50%): ≈ SMH 46% + BRK-B 45% (sobreajuste; **no** usar como señal de trading).
 
 ---
 
 ## Figuras principales
 
-Tras `python run_analysis.py` (o al ejecutar los notebooks):
+Los notebooks (`notebooks/00`–`09`) incluyen las gráficas en sus salidas. Versiones SVG para GitHub:
 
-- `figures/01_crecimiento.png`
-- `figures/02_retornos_anuales.png`
-- `figures/03_drawdowns.png`
-- `figures/04_correlacion.png`
-- `figures/05_rolling_returns.png`
-- `figures/06_activos_riesgo_retorno.png`
-- `figures/07_frontera_eficiente.png`
+### Crecimiento
+![Crecimiento](figures/01_crecimiento.svg)
 
-Los notebooks ya incluyen las figuras en sus salidas.
+### Retornos anuales
+![Retornos anuales](figures/02_retornos_anuales.svg)
+
+### Drawdowns
+![Drawdowns](figures/03_drawdowns.svg)
+
+### Correlación
+![Correlación](figures/04_correlacion.svg)
+
+### Rolling returns
+![Rolling](figures/05_rolling_returns.svg)
+
+### Frontera eficiente
+![Frontera](figures/07_frontera_eficiente.svg)
 
 ---
 
 ## Conclusiones actualizadas
 
-1. **La réplica del PDF es sólida** (CAGR/Max DD/Sharpe alineados a 2 decimales). El pipeline es creíble para enseñanza.
-2. **Con pesos vivos (más SMH + IEMG, sin SPY satélite), el portafolio sigue batir a SPY** en CAGR (~19.2% vs ~14.9%) y Sharpe (~1.02 vs ~0.85) hasta sep-2026, con Max DD algo peor (~−27.5% vs ~−23.9%).
-3. **IEMG aporta diversificación** (correlaciones más bajas con BRK-B/SPYG) pero históricamente diluye el motor EE.UU. growth; el juicio previo se confirma en parte.
-4. **El alpha no es uniforme**: se concentra en años risk-on tech (2020, 2023, 2024); 2022 sigue siendo el régimen que “rompe” el narrative.
-5. **La frontera eficiente ex-post favorece SMH+BRK-B** — útil para discutir sobreajuste y restricciones (tope 50%), no para rebalancear a ciegas.
+1. **La réplica del PDF es sólida** (CAGR/Max DD/Sharpe alineados a 2 decimales).
+2. **Con pesos vivos (más SMH + IEMG), el portafolio sigue batir a SPY** en CAGR (~19.2% vs ~14.9%) y Sharpe (~1.02 vs ~0.85) hasta sep-2026, con Max DD algo peor (~−27.5% vs ~−23.9%).
+3. **IEMG aporta diversificación** pero históricamente diluye el motor EE.UU. growth.
+4. **El alpha no es uniforme**: se concentra en años risk-on tech; 2022 es el régimen crítico.
+5. **La frontera eficiente ex-post favorece SMH+BRK-B** — útil para discutir sobreajuste, no para rebalancear a ciegas.
 
 ---
 
@@ -169,17 +175,16 @@ Los notebooks ya incluyen las figuras en sus salidas.
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python run_analysis.py          # datos + figuras + results/*.csv|json
-cd notebooks
-jupyter notebook                # o: jupyter nbconvert --execute --inplace *.ipynb
+python run_analysis.py
+cd notebooks && jupyter notebook
 ```
 
 ---
 
 ## Limitaciones
 
-- Precios Yahoo ≠ vendor de Portfolio Visualizer (aunque la réplica quedó casi exacta).
-- Sharpe/Sortino dependen de la serie de T-Bill (`^IRX`).
-- Optimización de media-varianza es **in-sample**.
-- No se modelan impuestos, spreads ni costos de rebalanceo.
-- Exposures/style Morningstar: omitidos (datos de pago).
+- Precios Yahoo ≠ vendor de Portfolio Visualizer.
+- Sharpe/Sortino dependen de `^IRX`.
+- Optimización media-varianza es **in-sample**.
+- Sin impuestos/spreads/costos de rebalanceo.
+- Exposures/style Morningstar omitidos (datos de pago).
