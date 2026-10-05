@@ -1,0 +1,62 @@
+{
+  "as_of_weights": "2026-10-05T16:45:09Z",
+  "source": "eToro get-my-portfolio-summary (real, solo lectura)",
+  "current_weights": {
+    "SPYG": 0.3051,
+    "SMH": 0.2176,
+    "BRK-B": 0.204,
+    "IEMG": 0.2015,
+    "VTI": 0.0718
+  },
+  "current_values_usd": {
+    "SPYG": 14970.29,
+    "SMH": 10676.04,
+    "BRK-B": 10008.96,
+    "IEMG": 9887.05,
+    "VTI": 3520.96
+  },
+  "period_updated": "2016-01 → 2026-09",
+  "period_validation": "2016-01 → 2025-05",
+  "rebalance": "annual",
+  "benchmark": "SPY",
+  "initial_usd": 10000.0,
+  "validation_vs_pdf": {
+    "pdf_cagr": 0.176,
+    "replica_cagr": 0.17596897126965216,
+    "pdf_maxdd": -0.2559,
+    "replica_maxdd": -0.2558733243294897,
+    "pdf_sharpe": 0.96,
+    "replica_sharpe": 0.9559934203847432,
+    "pdf_end": 46016,
+    "replica_end": 46014.464702147954,
+    "pdf_stdev": 0.1631,
+    "replica_stdev": 0.16306477501697453
+  },
+  "updated_portfolio": {
+    "cagr": 0.19212853035291433,
+    "stdev": 0.16535353843045206,
+    "max_drawdown": -0.2746686178514669,
+    "sharpe": 1.0154999748764129,
+    "sortino": 0.9266993827377035,
+    "beta": 1.0321732527867085,
+    "alpha": 0.036166361591891905,
+    "best_year": 0.3247297346079079,
+    "worst_year": -0.21021912642881602,
+    "end_balance": 66141.36125759923,
+    "upside_capture": 108.79563720713945,
+    "downside_capture": 89.55521952405469,
+    "tracking_error": 0.05726660123233614,
+    "information_ratio": 0.7542367202686465,
+    "corr_bench": 0.9385694614894705
+  },
+  "updated_spy": {
+    "cagr": 0.1489359568585047,
+    "stdev": 0.15035826698768184,
+    "max_drawdown": -0.23927172705372746,
+    "sharpe": 0.8527046084831564,
+    "sortino": 0.7700292034778896,
+    "best_year": 0.31223863915015815,
+    "worst_year": -0.18175367665431497,
+    "end_balance": 44481.5670130398
+  }
+}
