@@ -1,5 +1,1 @@
-# Notebooks del curso
-
-Versiones en GitHub: ejecutadas con **salidas de texto**; las figuras PNG viven en `/figures` (y se regeneran con `run_analysis.py` o al re-ejecutar localmente).
-
-Copias con imágenes embebidas (más pesadas): carpeta local `notebooks_full/` en el entorno de desarrollo.
+IyBOb3RlYm9va3MgZGVsIGN1cnNvCgpDYXDDrXR1bG9zIGAwMGAtYDA5YCBlamVjdXRhZG9zIGNvbiBzYWxpZGFzIChpbmNsdXllbmRvIGdyw6FmaWNhcyBlbWJlYmlkYXMpLgoKQWJyaXIgZW4gb3JkZW4gZGVzZGUgZWwgW1JFQURNRSBwcmluY2lwYWxdKC4uL1JFQURNRS5tZCkuCg==
