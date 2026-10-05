@@ -1,0 +1,9 @@
+{
+  "tickers": ["SPYG", "SMH", "BRK-B", "IEMG", "VTI"],
+  "current_weights": {"SPYG": 0.3051, "SMH": 0.2176, "BRK-B": 0.2040, "IEMG": 0.2015, "VTI": 0.0718},
+  "max_sharpe_weights": {"SPYG": 0.035, "SMH": 0.459, "BRK-B": 0.445, "IEMG": 0.047, "VTI": 0.013},
+  "min_vol_weights": {"SPYG": 0.252, "SMH": 0.001, "BRK-B": 0.355, "IEMG": 0.349, "VTI": 0.043},
+  "max_sharpe_stats": {"ret": 0.233, "vol": 0.184, "sharpe": 1.264},
+  "min_vol_stats": {"ret": 0.138, "vol": 0.140, "sharpe": 0.983},
+  "current_stats": {"ret": 0.189, "vol": 0.164, "sharpe": 1.150}
+}
