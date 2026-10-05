@@ -1,0 +1,1 @@
+"""Utilidades de backtest educativo."""
