@@ -25,7 +25,7 @@ Backtest educativo de la asignación de activos actual (snapshot eToro del **5 o
 | 7 | [`notebooks/07_rolling_returns.ipynb`](notebooks/07_rolling_returns.ipynb) | CAGR rodante 3y/5y |
 | 8 | [`notebooks/08_correlacion.ipynb`](notebooks/08_correlacion.ipynb) | Matriz de correlación |
 | 9 | [`notebooks/09_frontera_eficiente.ipynb`](notebooks/09_frontera_eficiente.ipynb) | Monte Carlo, máx Sharpe / mín vol |
-| 10 | [`notebooks/10_ahorrar_vs_invertir_40anios.ipynb`](notebooks/10_ahorrar_vs_invertir_40anios.ipynb) | Ahorrar US$1.000/mes al 4% vs invertir US$10.000 una vez (40 años, con relleno pre-lanzamiento — ver advertencias) |
+| 10 | [`notebooks/10_ahorrar_vs_invertir_40anios.ipynb`](notebooks/10_ahorrar_vs_invertir_40anios.ipynb) | Ahorrar US$1.000/mes al 4% vs invertir US$10.000 una vez (40 años, con relleno pre-lanzamiento — ver advertencias) + escenarios con aportes de US$50 y US$100/mes y aporte de equilibrio |
 
 Código compartido: [`src/portfolio_utils.py`](src/portfolio_utils.py) · script batch: [`run_analysis.py`](run_analysis.py)
 
