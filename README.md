@@ -25,7 +25,7 @@ Backtest educativo de la asignación de activos actual (snapshot eToro del **5 o
 | 7 | [`notebooks/07_rolling_returns.ipynb`](notebooks/07_rolling_returns.ipynb) | CAGR rodante 3y/5y |
 | 8 | [`notebooks/08_correlacion.ipynb`](notebooks/08_correlacion.ipynb) | Matriz de correlación |
 | 9 | [`notebooks/09_frontera_eficiente.ipynb`](notebooks/09_frontera_eficiente.ipynb) | Monte Carlo, máx Sharpe / mín vol |
-| 10 | [`notebooks/10_ahorrar_vs_invertir_40anios.ipynb`](notebooks/10_ahorrar_vs_invertir_40anios.ipynb) | Ahorrar US$1.000/mes al 4% vs invertir US$10.000 una vez (40 años, con relleno pre-lanzamiento — ver advertencias) + escenarios con aportes de US$50 y US$100/mes y aporte de equilibrio |
+| 10 | [`notebooks/10_ahorrar_vs_invertir_40anios.ipynb`](notebooks/10_ahorrar_vs_invertir_40anios.ipynb) | Ahorrar US$1.000/mes al 4% vs invertir US$10.000 una vez (40 años, relleno pre-lanzamiento con el S&P 500 real — ver metodología) + escenarios con aportes de US$50 y US$100/mes y aporte de equilibrio |
 
 Código compartido: [`src/portfolio_utils.py`](src/portfolio_utils.py) · script batch: [`run_analysis.py`](run_analysis.py)
 
@@ -163,5 +163,9 @@ cd notebooks && jupyter notebook
 **Autor:** Andrés Alejandro Rodríguez Lozano  
 **Portafolio:** Portafolio de Andrés Alejandro Rodríguez Lozano
 
-## ⚠️ Advertencia del capítulo 10 (40 años, 1986–2026)
-SPYG, SMH, VTI (2000–2001) e IEMG (2012) no existían en 1986. Para los meses previos a su lanzamiento se usa el **retorno mensual promedio geométrico de cada activo** como constante: esa parte **no tiene caídas** (1987, 2000–02, 2008 para IEMG) y no es historia real. BRK.B usa la historia de BRK‑A (misma empresa) desde 1986. Como sensibilidad, los meses previos se rellenan con el **S&P 500 real**; se reportan ambos valores finales. El S&P 500 usa `^SP500TR` desde 1988 y `^GSPC` (solo precio) en 1986–87. Contenido educativo, no es asesoría de inversión.
+## ⚠️ Metodología del capítulo 10 (40 años, 1986–2026)
+SPYG, SMH, VTI (2000–2001) e IEMG (2012) no existían en 1986. **Método principal:** antes del lanzamiento de cada ETF se usa el **retorno mensual real del S&P 500**; desde su lanzamiento, datos reales. BRK.B usa la historia de BRK‑A (misma empresa) desde 1986. El S&P 500 usa `^SP500TR` desde 1988 y `^GSPC` (solo precio) en 1986–87.
+
+Resultados a 40 años (US$10.000 iniciales): ahorrador 4% (US$1.000/mes) US$1.209.074 · ahorrador 0% US$490.000 · mi portafolio US$1.131.579 (+US$50/mes: 1.629.170; +US$100/mes: 2.126.761) · S&P 500 US$740.695 (+50: 1.113.196; +100: 1.485.697).
+
+Como **método alternativo** el notebook compara rellenar con el promedio geométrico de cada activo: penaliza el pasado (los promedios arrancan con la burbuja punto com o en 2012) y no tiene caídas (US$632.041 sin aportes). Contenido educativo, no es asesoría de inversión.
