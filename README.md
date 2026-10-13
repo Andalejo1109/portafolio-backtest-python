@@ -25,6 +25,7 @@ Backtest educativo de la asignación de activos actual (snapshot eToro del **5 o
 | 7 | [`notebooks/07_rolling_returns.ipynb`](notebooks/07_rolling_returns.ipynb) | CAGR rodante 3y/5y |
 | 8 | [`notebooks/08_correlacion.ipynb`](notebooks/08_correlacion.ipynb) | Matriz de correlación |
 | 9 | [`notebooks/09_frontera_eficiente.ipynb`](notebooks/09_frontera_eficiente.ipynb) | Monte Carlo, máx Sharpe / mín vol |
+| 10 | [`notebooks/10_ahorrar_vs_invertir_40anios.ipynb`](notebooks/10_ahorrar_vs_invertir_40anios.ipynb) | Ahorrar US$1.000/mes al 4% vs invertir US$10.000 una vez (40 años, con relleno pre-lanzamiento — ver advertencias) |
 
 Código compartido: [`src/portfolio_utils.py`](src/portfolio_utils.py) · script batch: [`run_analysis.py`](run_analysis.py)
 
@@ -161,3 +162,6 @@ cd notebooks && jupyter notebook
 
 **Autor:** Andrés Alejandro Rodríguez Lozano  
 **Portafolio:** Portafolio de Andrés Alejandro Rodríguez Lozano
+
+## ⚠️ Advertencia del capítulo 10 (40 años, 1986–2026)
+SPYG, SMH, VTI (2000–2001) e IEMG (2012) no existían en 1986. Para los meses previos a su lanzamiento se usa el **retorno mensual promedio geométrico de cada activo** como constante: esa parte **no tiene caídas** (1987, 2000–02, 2008 para IEMG) y no es historia real. BRK.B usa la historia de BRK‑A (misma empresa) desde 1986. Como sensibilidad, los meses previos se rellenan con el **S&P 500 real**; se reportan ambos valores finales. El S&P 500 usa `^SP500TR` desde 1988 y `^GSPC` (solo precio) en 1986–87. Contenido educativo, no es asesoría de inversión.
